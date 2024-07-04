@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfica SWA</title>
+    <style>
+        /* Estilos gerais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            height: 15vh;
+        }
+
+        #logo img {
+            max-width: 15vw;
+        }
+
+        /* Seções */
+        #servicos,
+        #sobre-nos {
+            padding: 20px;
+        }
+
+        /* Efeito de hover nas seções */
+        #servicos:hover,
+        #sobre-nos:hover {
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            /* Ou aumente o tamanho da fonte: font-size: 18px; */
+            transition: box-shadow 0.3s ease;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #mapa iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+
+        #informacoes h3 {
+            font-size: 18px;
+        }
+
+        #informacoes ul {
+            list-style: none;
+        }
+
+        #informacoes li {
+            margin-bottom: 10px;
+        }
+
+        /* Efeito de hover nos links do rodapé */
+        #informacoes a:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+        @media screen and (max-width: 768px) {
+            .menu-list {
+                display: none;
+            }
+
+            .menu-list.active {
+                display: block;
+            }
+        }
+        .menu {
+            display: flex;
+            align-items: center;
+            background-color: yellow;
+            margin: 0;
+            padding: 15px;
+            width: 100vw;
+            justify-content: space-between;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #fff;
+        }
+
+        .menu-list {
+            display: none;
+            list-style: none;
+        }
+
+        .menu-list.active {
+            display: block;
+        }
+        li>a{
+            color: #fff;
+            text-decoration: none;
+        }
+        .produtos{
+            width: 350px;
+            height: 450px;
+            background-color: rgb(245, 243, 243);
+            box-shadow: 5px 5px rgba(0, 0, 0, 0.16);
+            border-radius: 20%;
+        }
+        #ondeficaosprodutos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #servicos{
+            text-align: center;
+            font-size: 30px;
+        }
+        #sobre-nos{
+            background-color: rgb(248, 248, 248);
+        }
+        iframe {
+            width: 60%;
+            height: 60%;
+            position: absolute;
+       }
+    </style>
+</head>
+<body>
+    <!-- Navbar com menu sanduíche e logo -->
+    <nav id="Início">
+        <div id="logo">
+            <a href="teste.html"><img src="assets/imgs/Design sem nome.png" alt="Logo"></a>
+        </div>
+        <div id="menu">
+            <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+            <ul class="menu-list">
+                <li><a href="#mapa">Contato</a></li>
+                <li><a href="#sobre-nos">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <div id="servicos">
+        <h2>Nossos Serviços</h2>
+        <div id="ondeficaosprodutos">
+                <div class="produtos">
+                    <h1></h1>
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+                <div class="produtos">
+                    <h1></h1>
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+                <div class="produtos">
+                    <h1></h1>
+                    <img src="" alt="">
+                    <p></p>
+                </div>
+                <div class="produtos">
+                    <h1></h1>
+                    <img src="" alt="">
+                    <p></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção "Sobre Nós" -->
+    <div id="sobre-nos">
+        <h2>Sobre Nós</h2>
+        <p>Somos uma gráfica com mais de 10 anos de experiência no mercado.</p>
+    </div>
+
+    <!-- Rodapé com mapa e informações -->
+    <footer>
+        <div id="mapa">
+            <!-- Mapa da localização da gráfica (insira um iframe do Google Maps) -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14593.876883409921!2d-47.9985405!3d-23.8729746!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5afc9b3f09363%3A0x40d758a9d4029506!2sGrafica%20SWA!5e0!3m2!1spt-BR!2sbr!4v1720056215969!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <script>
+                const menuToggle = document.querySelector('.menu-toggle');
+                const menuList = document.querySelector('.menu-list');
+        
+                menuToggle.addEventListener('click', () => {
+                    menuList.classList.toggle('active');
+                });
+            </script>
+</body>
+</html>
